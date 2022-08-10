@@ -1,0 +1,41 @@
+.activity__title {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.activity__list {
+  display: flex;
+  gap: 30px;
+}
+
+.activity__list-item {
+  flex-basis: calc((100% - 60px) / 3);
+}
+
+.activity-card {
+  position: relative;
+}
+
+.activity-card__pic {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.activity-card__desc {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--color-text-white);
+  text-transform: uppercase;
+  line-height: 1.14;
+  font-weight: 700;
+}

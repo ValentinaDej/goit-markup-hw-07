@@ -1,0 +1,38 @@
+.footer-social {
+  margin-right: auto;
+}
+
+.footer-social__title {
+  color: var(--color-text-white);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+
+  margin-bottom: 20px;
+}
+
+.footer-social__list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.footer-social__list-item-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color var(--transformation-property);
+  &:hover,
+  &:focus {
+    background-color: var(--color-text-accent);
+  }
+}
+
+.footer-social__list-item-icon {
+  fill: var(--color-text-white);
+}
