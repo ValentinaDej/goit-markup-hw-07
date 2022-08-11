@@ -1,4 +1,4 @@
-.footer-contact {
+.footer {
   background-color: var(--color-hero-bgn);
   padding-top: 60px;
   padding-bottom: 60px;
@@ -13,12 +13,12 @@
   font-style: normal;
 }
 
-.footer-contact-list-item:not(:last-child) {
+.footer-adress__list-item:not(:last-child) {
   margin-bottom: 9px;
 }
 
-.contacts {
-  color: rgba(255, 255, 255, 0.6);
+.footer-adress__location {
+  color: var(--color-text-white);
   line-height: 1.71;
   transition: color var(--transformation-property);
   &:hover,
@@ -27,8 +27,8 @@
   }
 }
 
-.location {
-  color: var(--color-text-white);
+.footer-adress__contacts {
+  color: rgba(255, 255, 255, 0.6);
   line-height: 1.71;
   transition: color var(--transformation-property);
   &:hover,

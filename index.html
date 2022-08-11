@@ -381,30 +381,32 @@
         </div>
       </section>
     </main>
-    <footer class="footer-contact">
+    <footer class="footer">
       <div class="container footer-section">
         <div class="footer-adress">
           <a class="logo link" href="./index.html" lang="en"
             >Web<span class="footer-logo-part">Studio</span></a
           >
           <address class="adress">
-            <ul class="footer-contact-list list">
-              <li class="footer-contact-list-item">
+            <ul class="footer-adress__list list">
+              <li class="footer-adress__list-item">
                 <a
-                  class="location link"
+                  class="footer-adress__location link"
                   href="https://goo.gl/maps/3JvyKSZvg7btHQSq7"
                   target="_blank"
                   rel="noopener noreferrer"
                   >г. Киев, пр-т Леси Украинки, 26</a
                 >
               </li>
-              <li class="footer-contact-list-item">
-                <a class="contacts link" href="mailto:info@devstudio.com" lang="en"
+              <li class="footer-adress__list-item">
+                <a class="footer-adress__contacts link" href="mailto:info@devstudio.com" lang="en"
                   >info@devstudio.com</a
                 >
               </li>
-              <li class="footer-contact-list-item">
-                <a class="contacts link" href="tel:+380961111111">+38 096 111 11 11</a>
+              <li class="footer-adress__list-item">
+                <a class="footer-adress__contacts link" href="tel:+380961111111"
+                  >+38 096 111 11 11</a
+                >
               </li>
             </ul>
           </address>
@@ -464,55 +466,55 @@
           </svg>
         </button>
         <form autocomplete="off" class="modal-container">
-          <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
-          <div class="user-data">
-            <label class="user-data-label"
-              ><span class="user-data-label-desc">Ім'я</span>
-              <input class="user-data-input" type="text" name="name" required />
-              <svg class="user-data-icon" width="18" height="18">
+          <p class="modal-container__title">Залиште свої дані, ми вам передзвонимо</p>
+          <div class="modal-container__user-data">
+            <label class="modal-container__label"
+              ><span class="modal-container__desc">Ім'я</span>
+              <input class="modal-container__input" type="text" name="name" required />
+              <svg class="modal-container__icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-person"></use>
               </svg>
             </label>
-            <label class="user-data-label"
-              ><span class="user-data-label-desc">Телефон</span>
-              <input class="user-data-input" type="tel" name="tel" required />
-              <svg class="user-data-icon" width="18" height="18">
+            <label class="modal-container__label"
+              ><span class="modal-container__desc">Телефон</span>
+              <input class="modal-container__input" type="tel" name="tel" required />
+              <svg class="modal-container__icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
             </label>
-            <label class="user-data-label"
-              ><span class="user-data-label-desc">Пошта</span>
-              <input class="user-data-input" type="email" name="email" required />
-              <svg class="user-data-icon" width="18" height="18">
+            <label class="modal-container__label"
+              ><span class="modal-container__desc">Пошта</span>
+              <input class="modal-container__input" type="email" name="email" required />
+              <svg class="modal-container__icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
             </label>
-            <label class="user-data-label add-margin"
-              ><span class="user-data-label-desc">Коментар</span
+            <label class="modal-container__label modal-container__label--add-margin"
+              ><span class="modal-container__desc">Коментар</span
               ><textarea
-                class="user-data-coment"
+                class="modal-container__coment"
                 name="coment"
                 rows="8"
                 placeholder="Введіть текст"
               ></textarea>
             </label>
-            <label class="check-label">
+            <label class="modal-container__check-label">
               <input
                 type="checkbox"
-                class="user-agreement visually-hidden"
+                class="modal-container__check-agreement visually-hidden"
                 name="agreement"
                 value="agreement"
                 required
               />
-              <svg class="user-agreement-icon" width="16" height="15">
+              <svg class="modal-container__policy-icon" width="16" height="15">
                 <use href="./images/icons.svg#icon-check"></use>
               </svg>
               <span>
                 Погоджуюся з розсилкою та приймаю&nbsp;
-                <a href="" class="user-agreement-text">Умови договору</a></span
+                <a href="" class="modal-container__policy-text">Умови договору</a></span
               >
             </label>
-            <button type="submit" class="user-data-btn">Відправити</button>
+            <button type="submit" class="modal-container__btn">Відправити</button>
           </div>
         </form>
       </div>

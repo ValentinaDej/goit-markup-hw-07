@@ -9,12 +9,12 @@
   opacity: 1;
   visibility: visible;
   transition: opacity var(--transformation-property), visibility var(--transformation-property);
-}
 
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-  visibility: hidden;
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
 }
 
 .modal {
@@ -42,26 +42,20 @@
   border-radius: 50%;
   background-size: contain;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  /* margin-right: 8px;
-  margin-top: 8px;
-  margin-bottom: 2px; */
   background-color: transparent;
   padding: 0;
   transition: fill var(--transformation-property);
-}
 
-.btn-close:hover {
-  fill: var(--color-text-accent);
+  &:hover {
+    fill: var(--color-text-accent);
+  }
 }
 
 .modal-container {
-  /* width: 528px;
-  margin: 0 auto;
-  padding: 0 40px 40px 40px; */
   position: relative;
 }
 
-.modal-title {
+.modal-container__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -71,20 +65,24 @@
   margin-bottom: 12px;
 }
 
-.user-data {
+.modal-container__user-data {
   display: block;
   flex-direction: column;
 }
 
-.user-data-label {
+.modal-container__label {
   position: relative;
 
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+
+  &.modal-container__label--add-margin {
+    margin-bottom: 20px;
+  }
 }
 
-.user-data-label-desc {
+.modal-container__desc {
   font-family: var(--font-page);
   font-weight: 400;
   font-size: 12px;
@@ -93,11 +91,7 @@
   color: var(--color-text-grey);
 }
 
-.user-data-label.add-margin {
-  margin-bottom: 20px;
-}
-
-.user-data-input {
+.modal-container__input {
   margin-top: 4px;
   padding: 12px 10px 12px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -107,9 +101,37 @@
   font-size: 12px;
   color: var(--color-text-black);
   transition: border-color var(--transformation-property);
+  &:focus {
+    border-color: var(--color-text-accent);
+    outline: none;
+    cursor: pointer;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  .modal-container__label:hover & {
+    border: 1px solid var(--color-text-accent);
+  }
+  .modal-container__label:focus-within & {
+    border: 1px solid var(--color-text-accent);
+  }
 }
 
-.user-data-coment {
+.modal-container__icon {
+  position: absolute;
+  left: 12px;
+  top: 27px;
+  transition: fill var(--transformation-property);
+  .modal-container__input:focus + & {
+    fill: var(--color-text-accent);
+  }
+  .modal-container__label:focus-within &,
+  .modal-container__label:hover & {
+    fill: var(--color-text-accent);
+  }
+}
+
+.modal-container__coment {
   margin-top: 4px;
   padding: 12px 16px;
   resize: none;
@@ -120,46 +142,20 @@
   line-height: 1.17;
   color: var(--color-text-black);
   transition: border-color var(--transformation-property);
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+  &:focus {
+    border-color: var(--color-text-accent);
+    outline: none;
+    cursor: pointer;
+  }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
-.user-data-coment::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.user-data-icon {
-  position: absolute;
-  left: 12px;
-  top: 27px;
-  transition: fill var(--transformation-property);
-}
-
-.user-data-input:focus,
-.user-data-coment:focus {
-  border-color: var(--color-text-accent);
-  outline: none;
-  cursor: pointer;
-}
-
-.user-data-input:focus + .user-data-icon {
-  fill: var(--color-text-accent);
-}
-
-.user-data-input:hover,
-.user-data-coment:hover {
-  cursor: pointer;
-}
-
-.user-data-label:focus-within .user-data-input,
-.user-data-label:hover .user-data-input {
-  border: 1px solid var(--color-text-accent);
-}
-
-.user-data-label:focus-within .user-data-icon,
-.user-data-label:hover .user-data-icon {
-  fill: var(--color-text-accent);
-}
-
-.check-label {
+.modal-container__check-label {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,11 +168,11 @@
   color: var(--color-text-grey);
 }
 
-.user-agreement-text {
+.modal-container__policy-text {
   color: var(--color-text-accent);
 }
 
-.user-agreement-icon {
+.modal-container__policy-icon {
   display: inline-block;
   width: 16px;
   height: 15px;
@@ -184,15 +180,14 @@
   border-radius: 4px;
   margin-right: 7px;
   cursor: pointer;
+  .modal-container__check-agreement:checked + & {
+    background-color: var(--color-text-accent);
+    border-color: var(--color-text-accent);
+    background-origin: border-box;
+  }
 }
 
-.user-agreement:checked + .user-agreement-icon {
-  background-color: var(--color-text-accent);
-  border-color: var(--color-text-accent);
-  background-origin: border-box;
-}
-
-.user-data-btn {
+.modal-container__btn {
   padding: 10px 52px;
   font-weight: 700;
   font-size: 16px;
