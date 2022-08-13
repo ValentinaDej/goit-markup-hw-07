@@ -126,6 +126,61 @@ button {
   color: var(--color-text-white);
 }
 
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.social-links__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition: background-color var(--transformation-property), color var(--transformation-property);
+}
+
+.social-links__link_light {
+  color: var(--color-link-unacive);
+}
+.social-links__link_light:hover, .social-links__link_light:focus {
+  background-color: var(--color-text-accent);
+  color: var(--color-text-white);
+}
+
+.social-links__link_dark {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.social-links__link_dark:hover, .social-links__link_dark:focus {
+  background-color: var(--color-text-accent);
+}
+
+.social-links__icon {
+  fill: currentColor;
+}
+
+.social-links__icon--dark {
+  fill: var(--color-text-white);
+}
+
+.button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--color-text-white);
+  background-color: var(--color-text-accent);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color var(--transformation-property);
+  padding: 10px 52px;
+}
+.button:hover, .button:focus {
+  background-color: var(--color-button-hover);
+}
+
 .menu {
   display: flex;
   justify-content: flex-start;
@@ -162,12 +217,12 @@ button {
 .menu-list__item:hover, .menu-list__item:focus {
   color: var(--color-text-accent);
 }
-.menu-list__item.menu-list__item--current {
+.menu-list__item.menu-list__item_current {
   color: var(--color-text-accent);
   position: relative;
 }
 
-.menu-list__item--current::after {
+.menu-list__item_current::after {
   position: absolute;
   display: block;
   content: "";
@@ -224,20 +279,6 @@ button {
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.hero__button {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  color: var(--color-text-white);
-  background-color: var(--color-text-accent);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color var(--transformation-property);
-}
-.hero__button:hover, .hero__button:focus {
-  background-color: var(--color-button-hover);
 }
 
 .advantage-list {
@@ -366,32 +407,6 @@ button {
   text-align: center;
   color: var(--color-text-grey);
   margin-bottom: 16px;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 10px;
-}
-
-.social-links__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  color: var(--color-link-unacive);
-  transition: background-color var(--transformation-property), color var(--transformation-property);
-}
-.social-links__link:hover, .social-links__link:focus {
-  background-color: var(--color-text-accent);
-  color: var(--color-text-white);
-}
-
-.social-links__icon {
-  fill: currentColor;
 }
 
 .clients__title {
@@ -576,31 +591,6 @@ button {
   letter-spacing: 0.03em;
 }
 
-.footer-social__list {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 10px;
-}
-
-.footer-social__list-item-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color var(--transformation-property);
-}
-.footer-social__list-item-link:hover, .footer-social__list-item-link:focus {
-  background-color: var(--color-text-accent);
-}
-
-.footer-social__list-item-icon {
-  fill: var(--color-text-white);
-}
-
 .footer-email__title {
   color: var(--color-text-white);
   text-transform: uppercase;
@@ -639,13 +629,6 @@ button {
   padding-left: 28px;
   padding-right: 28px;
   width: 200px;
-  background-color: var(--color-text-accent);
-  color: var(--color-text-white);
-  font-weight: 700;
-  font-size: 16px;
-  font-family: var(--font-page);
-  line-height: 1.88;
-  letter-spacing: 0.06em;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -833,15 +816,4 @@ button {
   background-color: var(--color-text-accent);
   border-color: var(--color-text-accent);
   background-origin: border-box;
-}
-
-.modal-container__btn {
-  padding: 10px 52px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  color: var(--color-text-white);
-  background-color: var(--color-button-hover);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }/*# sourceMappingURL=main.css.map */

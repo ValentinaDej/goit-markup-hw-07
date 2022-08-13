@@ -50,27 +50,3 @@
   color: var(--color-text-grey);
   margin-bottom: 16px;
 }
-
-.social-links {
-  @include flex(center);
-  gap: 10px;
-}
-
-.social-links__link {
-  @include flex(center, center);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  color: var(--color-link-unacive);
-  transition: background-color var(--transformation-property), color var(--transformation-property);
-
-  &:hover,
-  &:focus {
-    background-color: var(--color-text-accent);
-    color: var(--color-text-white);
-  }
-}
-
-.social-links__icon {
-  fill: currentColor;
-}

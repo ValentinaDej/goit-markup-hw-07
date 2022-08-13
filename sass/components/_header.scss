@@ -33,13 +33,13 @@
   &:focus {
     color: var(--color-text-accent);
   }
-  &.menu-list__item--current {
+  &.menu-list__item_current {
     color: var(--color-text-accent);
     position: relative;
   }
 }
 
-.menu-list__item--current {
+.menu-list__item_current {
   &::after {
     position: absolute;
     display: block;
