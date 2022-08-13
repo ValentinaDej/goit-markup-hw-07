@@ -84,6 +84,28 @@ button {
   text-decoration: none;
 }
 
+.button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--color-text-white);
+  background-color: var(--color-text-accent);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color var(--transformation-property);
+  padding: 10px 52px;
+}
+.button:hover, .button:focus {
+  background-color: var(--color-button-hover);
+}
+
+.title {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -164,21 +186,6 @@ button {
 
 .social-links__icon--dark {
   fill: var(--color-text-white);
-}
-
-.button {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  letter-spacing: 0.06em;
-  color: var(--color-text-white);
-  background-color: var(--color-text-accent);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color var(--transformation-property);
-  padding: 10px 52px;
-}
-.button:hover, .button:focus {
-  background-color: var(--color-button-hover);
 }
 
 .menu {
@@ -315,13 +322,6 @@ button {
   color: var(--color-text-grey);
 }
 
-.activity__title {
-  text-align: center;
-  margin-bottom: 50px;
-  font-size: 36px;
-  line-height: 1.17;
-}
-
 .activity__list {
   display: flex;
   gap: 30px;
@@ -359,13 +359,6 @@ button {
 
 .team {
   background-color: var(--color-main-bgn);
-}
-
-.team__title {
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  margin-bottom: 50px;
 }
 
 .team__list {
@@ -407,14 +400,6 @@ button {
   text-align: center;
   color: var(--color-text-grey);
   margin-bottom: 16px;
-}
-
-.clients__title {
-  margin-bottom: 50px;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
 }
 
 .clients-list {
