@@ -1,8 +1,6 @@
 .switch__list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px;
+  @include flex(center);
+  @include wraped(8px);
   margin-bottom: 56px;
 }
 
@@ -29,8 +27,7 @@
 
 .portfolio__project-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  @include wraped(30px);
 }
 
 .portfolio__project-item {

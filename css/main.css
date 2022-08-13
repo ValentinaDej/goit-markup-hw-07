@@ -96,6 +96,7 @@ button {
 
 .footer-section {
   display: flex;
+  justify-content: flex-start;
   align-items: baseline;
 }
 
@@ -126,17 +127,19 @@ button {
 }
 
 .menu {
-  border-bottom: 1px solid var(--color-line);
   display: flex;
+  justify-content: flex-start;
   align-items: center;
+  border-bottom: 1px solid var(--color-line);
   height: 80px;
 }
 
 .menu-navigation {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   margin-right: auto;
   line-height: 1.2;
-  display: flex;
-  align-items: center;
   height: 80px;
 }
 
@@ -176,8 +179,6 @@ button {
 }
 
 .contact-list {
-  display: flex;
-  justify-content: center;
   gap: 30px;
 }
 
@@ -253,18 +254,18 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
   width: 270px;
   height: 120px;
   border-radius: 4px;
   background-color: var(--color-main-bgn);
-  margin-bottom: 30px;
 }
 
 .advantage-group__title {
+  margin-bottom: 10px;
   line-height: 1.14;
   font-size: 14px;
   text-transform: uppercase;
-  margin-bottom: 10px;
 }
 
 .advantage-group__desc {
@@ -274,10 +275,10 @@ button {
 }
 
 .activity__title {
-  font-size: 36px;
-  line-height: 1.17;
   text-align: center;
   margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.17;
 }
 
 .activity__list {
@@ -370,6 +371,7 @@ button {
 .social-links {
   display: flex;
   justify-content: center;
+  align-items: stretch;
   gap: 10px;
 }
 
@@ -393,16 +395,17 @@ button {
 }
 
 .clients__title {
+  margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-  margin-bottom: 50px;
   letter-spacing: 0.03em;
 }
 
 .clients-list {
   display: flex;
   justify-content: center;
+  align-items: stretch;
   gap: 30px;
 }
 
@@ -429,6 +432,7 @@ button {
 .switch__list {
   display: flex;
   justify-content: center;
+  align-items: stretch;
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 56px;
@@ -523,9 +527,9 @@ button {
 }
 
 .footer {
-  background-color: var(--color-hero-bgn);
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: var(--color-hero-bgn);
 }
 
 .footer-adress {
@@ -564,17 +568,18 @@ button {
 }
 
 .footer-social__title {
+  margin-bottom: 20px;
   color: var(--color-text-white);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  margin-bottom: 20px;
 }
 
 .footer-social__list {
   display: flex;
   justify-content: center;
+  align-items: stretch;
   gap: 10px;
 }
 
@@ -629,8 +634,8 @@ button {
 
 .email__submit {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding-left: 28px;
   padding-right: 28px;
   width: 200px;
@@ -674,8 +679,8 @@ button {
 
 .btn-close {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: absolute;
   top: 8px;
   right: 8px;

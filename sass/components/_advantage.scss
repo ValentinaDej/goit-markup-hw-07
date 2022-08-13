@@ -1,7 +1,6 @@
 .advantage-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  @include wraped(30px);
 }
 
 .advantage-list__item {
@@ -9,21 +8,19 @@
 }
 
 .advantage-group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex(center, center);
+  margin-bottom: 30px;
   width: 270px;
   height: 120px;
   border-radius: 4px;
   background-color: var(--color-main-bgn);
-  margin-bottom: 30px;
 }
 
 .advantage-group__title {
+  margin-bottom: 10px;
   line-height: 1.14;
   font-size: 14px;
   text-transform: uppercase;
-  margin-bottom: 10px;
 }
 
 .advantage-group__desc {

@@ -3,25 +3,22 @@
 }
 
 .footer-social__title {
+  margin-bottom: 20px;
+
   color: var(--color-text-white);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-
-  margin-bottom: 20px;
 }
 
 .footer-social__list {
-  display: flex;
-  justify-content: center;
+  @include flex(center);
   gap: 10px;
 }
 
 .footer-social__list-item-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex(center, center);
   width: 44px;
   height: 44px;
   border-radius: 50%;

@@ -31,9 +31,7 @@
 }
 
 .btn-close {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex(center, center);
   position: absolute;
   top: 8px;
   right: 8px;
@@ -156,9 +154,7 @@
 }
 
 .modal-container__check-label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex(center, center);
   margin-bottom: 30px;
 
   font-weight: 400;
